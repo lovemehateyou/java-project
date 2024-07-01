@@ -1,10 +1,12 @@
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 public class text_operation {
-    public static void dictionary(String []input){
+    public static ArrayList<String> dictionary(String []input){
         String[] punc = {"the","in","of","it", "it's","so","a", "","to","no","if","of","d","omg","lol","am","i","that","can't","and"};
         int count = 0;
+        ArrayList <String> res = new ArrayList<>();
 
         Map<String, Integer> worddic = new LinkedHashMap<>();
         for(String word: input){
@@ -21,7 +23,7 @@ public class text_operation {
      
     for (Map.Entry<String, Integer> entry : worddic.entrySet()) {
             if(entry.getValue() > 0 && entry.getKey().length() > 4 && count < 10){
-                System.out.println( entry.getKey()) ; 
+                res.add(entry.getKey()) ; 
                 count++;  
         }
         else{
@@ -31,7 +33,7 @@ public class text_operation {
         
     }
 
-
+    return res;
 }
 
 }

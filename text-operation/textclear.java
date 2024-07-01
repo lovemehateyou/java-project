@@ -67,7 +67,7 @@ public static void remove_punc(){
 
 public static void space_remove(){
     for (int i = 0; i < words.length; i++) {
-        words[i] = words[i].replaceAll("\\s+", "");
+        words[i] = words[i].replaceAll(" ", "");
     }
 
 }
